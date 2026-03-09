@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>고2 입시 자가진단 | 에바연 바른교육연구소</title>
+
+<!-- ===== 카톡 링크 미리보기 OG 태그 ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="📋 고2 입시 자가진단 | 에바연">
+<meta property="og:description" content="내 학생부는 하나의 이야기로 연결되어 있나요? 탐구 방향, 목표 대학, 면접 준비까지 — 지금 바로 점검해보세요.">
+<meta property="og:image" content="https://via.placeholder.com/800x400/0d1b2a/c9a84c?text=에바연+고2+입시+자가진단">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="400">
+<meta name="description" content="고2 입시 자가진단 리포트 키트 — 수시 전략, 학생부 서사, 탐구 설계, 면접 준비까지 스스로 점검하는 자가진단 도구입니다.">
+<meta name="theme-color" content="#0d1b2a">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<style>
+:root {
+  --navy: #0d1b2a;
+  --navy2: #152338;
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-pale: #faf3e0;
+  --cream: #faf8f4;
+  --white: #ffffff;
+  --gray: #888;
+  --light: #f0ece2;
+  --border: #e4e0d6;
+  --red: #c0392b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { font-size: 16px; }
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background: var(--cream);
+  color: var(--navy);
+  min-height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* ── 카톡 진입 스플래시 ── */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: var(--navy);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+  text-align: center;
+}
+.splash-brand {
+  font-size: 12px;
+  color: var(--gold);
+  letter-spacing: 0.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.splash-badge {
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold-light);
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.08em;
+}
+.splash-title {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+.splash-title em { color: var(--gold); font-style: normal; }
+.splash-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+.splash-parts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.splash-part {
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.25);
+  color: rgba(255,255,255,0.7);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+.splash-btn {
+  width: 100%;
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 14px;
+  padding: 18px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+.splash-time {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ── 헤더 ── */
+.app-header {
+  background: var(--navy);
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+.hdr-left {}
+.hdr-brand { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 0.15em; }
+.hdr-title { font-family: 'Noto Serif KR', serif; font-size: 15px; color: var(--white); font-weight: 700; margin-top: 1px; }
+.hdr-grade {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ── 진행 바 ── */
+.prog-wrap {
+  background: var(--navy2);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.prog-bg {
+  flex: 1;
+  height: 3px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.prog-fill {
+  height: 100%;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+  width: 0%;
+}
+.prog-txt { font-size: 11px; color: rgba(255,255,255,0.45); white-space: nowrap; min-width: 48px; text-align: right; }
+
+/* ── 섹션 구분 ── */
+.part-block { border-bottom: 6px solid var(--light); }
+
+.part-head {
+  background: var(--navy);
+  padding: 18px 20px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.part-badge {
+  background: var(--gold);
+  color: var(--navy);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 900;
+  flex-shrink: 0;
+  line-height: 1.2;
+  text-align: center;
+  font-family: 'Noto Serif KR', serif;
+}
+.part-meta {}
+.part-tag { font-size: 10px; color: var(--gold); font-weight: 700; letter-spacing: 0.15em; margin-bottom: 3px; }
+.part-name { font-family: 'Noto Serif KR', serif; font-size: 16px; font-weight: 700; color: var(--white); line-height: 1.3; }
+.part-sub { font-size: 11px; color: rgba(255,255,255,0.38); margin-top: 3px; }
+
+.part-body { padding: 18px 20px 8px; }
+
+/* ── 안내 박스 ── */
+.info-box {
+  background: var(--gold-pale);
+  border-left: 3px solid var(--gold);
+  padding: 13px 14px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 18px;
+  font-size: 13px;
+  color: #5c4b18;
+  line-height: 1.75;
+}
+.info-box strong { color: #3a2e08; font-weight: 700; }
+
+/* ── 체크 그룹 ── */
+.chk-group { margin-bottom: 18px; }
+.chk-group-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.chk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background 0.1s;
+  border-radius: 6px;
+}
+.chk-item:last-child { border-bottom: none; }
+.chk-item:active { background: rgba(201,168,76,0.07); margin: 0 -6px; padding: 13px 6px; }
+
+.chk-box {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #ccc;
+  border-radius: 7px;
+  flex-shrink: 0;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  background: var(--white);
+}
+.chk-item.on .chk-box {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+.chk-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  border-radius: 3px;
+  opacity: 0;
+  transform: scale(0.4);
+  transition: all 0.18s;
+}
+.chk-item.on .chk-dot { opacity: 1; transform: scale(1); }
+.chk-txt { font-size: 14px; color: #333; line-height: 1.6; flex: 1; }
+.chk-item.on .chk-txt { color: var(--navy); font-weight: 500; }
+.chk-note { font-size: 12px; color: #aaa; margin-top: 3px; line-height: 1.5; }
+
+/* ── 경고 박스 ── */
+.warn-box {
+  background: #fff5f5;
+  border-left: 3px solid var(--red);
+  padding: 11px 13px;
+  border-radius: 0 8px 8px 0;
+  margin: 10px 0 16px;
+  font-size: 12px;
+  color: #a93226;
+  line-height: 1.6;
+}
+
+/* ── 대학 설계표 ── */
+.tbl-wrap { overflow-x: auto; margin-bottom: 8px; -webkit-overflow-scrolling: touch; }
+.univ-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 380px;
+  font-size: 12px;
+}
+.univ-tbl th {
+  background: var(--navy);
+  color: var(--gold);
+  padding: 10px 8px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+.univ-tbl td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+.univ-tbl tr:nth-child(even) td { background: #faf9f5; }
+.rtag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.rt-up { background: #fff0f0; color: #c0392b; }
+.rt-fit { background: #eef5ff; color: #2471a3; }
+.rt-safe { background: #eafaf1; color: #1e8449; }
+.univ-tbl input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  padding: 3px 2px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  background: transparent;
+  outline: none;
+  color: var(--navy);
+}
+.univ-tbl input:focus { border-bottom-color: var(--gold); }
+
+/* ── 성찰 ── */
+.reflect-block { margin-bottom: 12px; }
+.reflect-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+}
+.reflect-q {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+.reflect-q .qtag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 8px;
+  margin-right: 5px;
+}
+.reflect-hint {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.reflect-ta {
+  width: 100%;
+  min-height: 68px;
+  border: 1px solid #e0dbd0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 13px;
+  color: var(--navy);
+  resize: none;
+  background: var(--cream);
+  line-height: 1.6;
+  outline: none;
+  transition: border-color 0.2s;
+  -webkit-appearance: none;
+}
+.reflect-ta:focus { border-color: var(--gold); background: #fff; }
+.reflect-ta::placeholder { color: #ccc; }
+
+/* ── sticky 완료 버튼 ── */
+.sticky-cta {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  max-width: 480px;
+  margin: 0 auto;
+  background: rgba(250,248,244,0.96);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 20px calc(10px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--border);
+  z-index: 99;
+}
+.sticky-cta button {
+  width: 100%;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  border-radius: 13px;
+  padding: 16px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.sticky-cta button:active { opacity: 0.88; transform: scale(0.99); }
+.gold-txt { color: var(--gold); }
+
+/* ── 결과 페이지 ── */
+#result-page { display: none; }
+
+.result-wrap { padding: 24px 20px 120px; }
+
+.result-h {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.result-h em { color: var(--gold); font-style: normal; }
+
+/* 점수 카드 */
+.score-card {
+  background: var(--navy);
+  border-radius: 18px;
+  padding: 28px 20px 24px;
+  text-align: center;
+  margin-bottom: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.score-card::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 160px; height: 160px;
+  border: 1px solid rgba(201,168,76,0.12);
+  border-radius: 50%;
+}
+.score-lbl { font-size: 11px; color: rgba(255,255,255,0.45); letter-spacing: 0.1em; margin-bottom: 6px; }
+.score-num {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 2px;
+}
+.score-denom { font-size: 16px; color: rgba(255,255,255,0.35); margin-bottom: 14px; }
+.status-pill {
+  display: inline-block;
+  padding: 7px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+.st-good { background: rgba(39,174,96,0.18); color: #5dca88; border: 1px solid rgba(39,174,96,0.3); }
+.st-warn { background: rgba(241,196,15,0.15); color: #f4d03f; border: 1px solid rgba(241,196,15,0.3); }
+.st-bad  { background: rgba(192,57,43,0.15);  color: #e74c3c; border: 1px solid rgba(192,57,43,0.3); }
+
+/* 파트 점수 */
+.breakdown { margin-bottom: 16px; }
+.bd-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 8px;
+}
+.bd-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.bd-name { font-size: 13px; font-weight: 700; color: var(--navy); }
+.bd-score { font-family: 'Noto Serif KR', serif; font-size: 15px; font-weight: 700; color: var(--gold); }
+.bd-bar-bg { height: 3px; background: var(--light); border-radius: 2px; overflow: hidden; }
+.bd-bar { height: 100%; background: var(--navy); border-radius: 2px; transition: width 0.8s ease; }
+
+/* 권장 행동 */
+.action-box {
+  background: var(--gold-pale);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 12px;
+  padding: 15px 16px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  color: #5a4a1a;
+  line-height: 1.75;
+}
+.action-box strong { display: block; color: var(--navy); font-size: 14px; margin-bottom: 5px; }
+
+/* 결과 버튼 영역 */
+.result-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 8px;
+}
+.btn-gold {
+  width: 100%;
+  background: var(--gold);
+  color: var(--navy);
+  border: none;
+  border-radius: 13px;
+  padding: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: opacity 0.2s;
+}
+.btn-gold:active { opacity: 0.85; }
+
+.btn-kakao {
+  width: 100%;
+  background: #FEE500;
+  color: #3A1D1D;
+  border: none;
+  border-radius: 13px;
+  padding: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.btn-kakao:active { opacity: 0.88; }
+.kakao-icon {
+  width: 20px; height: 20px;
+  background: #3A1D1D;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #FEE500;
+  font-weight: 900;
+}
+
+.btn-navy {
+  width: 100%;
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+  border-radius: 13px;
+  padding: 15px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-navy:active { opacity: 0.88; }
+
+.evayeon-cta {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gray);
+  padding: 4px 0;
+  line-height: 1.7;
+}
+.evayeon-cta strong { color: var(--navy); }
+
+/* ── 캡처용 (숨김) ── */
+#cap-view {
+  position: fixed;
+  top: -9999px;
+  left: 0;
+  width: 390px;
+  background: var(--navy);
+  padding: 32px 28px 28px;
+  font-family: 'Noto Sans KR', sans-serif;
+  display: none;
+}
+.cap-brand { font-size: 10px; color: var(--gold); letter-spacing: 0.2em; font-weight: 700; margin-bottom: 18px; }
+.cap-title { font-family: 'Noto Serif KR', serif; font-size: 22px; font-weight: 900; color: #fff; margin-bottom: 4px; }
+.cap-sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 22px; }
+.cap-big { text-align: center; margin-bottom: 22px; }
+.cap-n { font-family: 'Noto Serif KR', serif; font-size: 80px; font-weight: 900; color: var(--gold); line-height: 1; }
+.cap-d { font-size: 18px; color: rgba(255,255,255,0.35); margin-bottom: 8px; }
+.cap-rows { margin-bottom: 18px; }
+.cap-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
+.cap-rn { font-size: 13px; color: rgba(255,255,255,0.65); }
+.cap-rs { font-family: 'Noto Serif KR', serif; font-size: 14px; font-weight: 700; color: var(--gold); }
+.cap-act { background: rgba(201,168,76,0.13); border: 1px solid rgba(201,168,76,0.22); border-radius: 10px; padding: 13px 14px; font-size: 12px; color: rgba(255,255,255,0.75); line-height: 1.7; margin-bottom: 18px; }
+.cap-act strong { color: var(--gold-light); display: block; margin-bottom: 4px; }
+.cap-foot { font-size: 10px; color: rgba(255,255,255,0.25); text-align: center; }
+
+/* ── 토스트 ── */
+.toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%) translateY(16px);
+  background: var(--navy);
+  color: #fff;
+  padding: 11px 22px;
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.28s;
+  z-index: 9999;
+  white-space: nowrap;
+  border: 1px solid rgba(201,168,76,0.3);
+  max-width: 90vw;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.pb-safe { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+</style>
+</head>
+<body>
+
+<!-- ===== 스플래시 (카톡 진입 첫 화면) ===== -->
+<div id="splash">
+  <div class="splash-brand">에바연 · EVAYEON</div>
+  <div class="splash-badge">고2 전용 · 2025–2026 기준</div>
+  <div class="splash-title">내 입시 준비,<br><em>지금 괜찮을까요?</em></div>
+  <div class="splash-desc">
+    학생부 서사는 연결되어 있나요?<br>
+    탐구 방향은 잡혀 있나요?<br>
+    면접 소재는 준비됐나요?<br><br>
+    스스로 점검하는 <strong style="color:var(--gold-light)">입시 자가진단 키트</strong>입니다.
+  </div>
+  <div class="splash-parts">
+    <span class="splash-part">PART A 수시·서사</span>
+    <span class="splash-part">PART B 탐구·대학</span>
+    <span class="splash-part">PART C 면접·로드맵</span>
+    <span class="splash-part">PART D 성찰</span>
+  </div>
+  <button class="splash-btn" onclick="startDiag()">지금 바로 시작하기 →</button>
+  <div class="splash-time">약 5분 소요 · 무료 · 에바연 제공</div>
+</div>
+
+
+<!-- ===== 메인 앱 (스플래시 후 표시) ===== -->
+<div id="app" style="display:none;">
+
+  <!-- 헤더 -->
+  <div class="app-header">
+    <div class="hdr-left">
+      <div class="hdr-brand">에바연 · EVAYEON</div>
+      <div class="hdr-title">고2 입시 자가진단</div>
+    </div>
+    <div class="hdr-grade">고2</div>
+  </div>
+
+  <!-- 진행 바 -->
+  <div class="prog-wrap">
+    <div class="prog-bg"><div class="prog-fill" id="progFill"></div></div>
+    <div class="prog-txt" id="progTxt">0 / 30</div>
+  </div>
+
+  <!-- ===== 폼 ===== -->
+  <div id="form-page" class="pb-safe">
+
+    <!-- PART A -->
+    <div class="part-block">
+      <div class="part-head">
+        <div class="part-badge">PART<br>A</div>
+        <div class="part-meta">
+          <div class="part-tag">SECTION 01 · 10점</div>
+          <div class="part-name">수시 전략 & 학생부 서사</div>
+          <div class="part-sub">전형 이해 · 지원 자격 · 서사 연결성</div>
+        </div>
+      </div>
+      <div class="part-body">
+
+        <div class="info-box">
+          ⚡ <strong>수시 3대 전형</strong><br>
+          학생부종합(학종) — 세특·탐구·활동 서사 평가<br>
+          학생부교과 — 내신 등급 중심<br>
+          논술 — 논술고사 성적 중심<br><br>
+          ※ 수상실적·자율동아리·독서활동·개인봉사·<br>자기소개서 → 2024학년도부터 <strong>대학에 미제공</strong>
+        </div>
+
+        <div class="chk-group">
+          <div class="chk-group-label">A-1 수시 전형 이해도</div>
+          <div class="chk-item" onclick="tap(this,2,'A')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">학종·교과·논술 전형의 차이를 설명할 수 있다
+              <div class="chk-note">각 전형이 무엇을 중심으로 평가하는지 알고 있을 때</div>
+            </div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'A')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">나의 주력 전형 1~2개를 결정했다
+              <div class="chk-note">내신과 세특 상황을 고려해 전형을 선택했을 때</div>
+            </div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'A')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">목표 대학 3곳 이상의 전형 유형과 수능 최저 기준을 확인했다
+              <div class="chk-note">실제 입시요강을 찾아 직접 확인했을 때</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="warn-box">⚠ 위 3항목 중 2개 이하 체크 → 전형 분석과 방향 설정이 먼저입니다.</div>
+
+        <div class="chk-group">
+          <div class="chk-group-label">A-2 학생부 서사 연결성</div>
+          <div class="chk-item" onclick="tap(this,2,'A')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">고1 핵심 세특과 고2 활동이 같은 방향으로 연결되어 있다
+              <div class="chk-note">탐구 주제나 관심 분야의 흐름이 이어질 때</div>
+            </div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'A')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">내 학생부를 처음 보는 사람도 진로 방향을 읽을 수 있다
+              <div class="chk-note">활동들이 파편화되지 않고 하나의 흐름으로 보일 때</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PART B -->
+    <div class="part-block">
+      <div class="part-head">
+        <div class="part-badge">PART<br>B</div>
+        <div class="part-meta">
+          <div class="part-tag">SECTION 02 · 10점</div>
+          <div class="part-name">탐구 설계 & 목표 대학</div>
+          <div class="part-sub">탐구 질문 심화 · 목표 대학 6장</div>
+        </div>
+      </div>
+      <div class="part-body">
+
+        <div class="info-box">
+          🔬 <strong>에바연 탐구 핵심 원칙</strong><br>
+          고2 탐구는 고1 탐구의 <strong>심화·확장</strong>이어야 합니다.<br>
+          새 주제를 찾는 것이 아니라, 고1 개념에서<br>더 깊은 질문을 꺼내는 것입니다.
+        </div>
+
+        <div class="chk-group">
+          <div class="chk-group-label">B-1 탐구 설계</div>
+          <div class="chk-item" onclick="tap(this,2,'B')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">고1 탐구에서 출발한 고2 심화 탐구 질문을 한 문장으로 말할 수 있다</div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'B')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">탐구보고서 초안을 작성했거나 현재 진행 중이다
+              <div class="chk-note">완성 여부보다 진행 중인지를 점검</div>
+            </div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'B')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">탐구보고서를 교과 교사에게 제출할 계획이 있다
+              <div class="chk-note">세특 기재 가능성을 높이는 핵심 행동</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chk-group">
+          <div class="chk-group-label">B-2 목표 대학 6장 설계</div>
+          <div class="chk-item" onclick="tap(this,2,'B')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">상향 2 · 적정 2 · 안정 2 구조로 목표 대학 6곳을 정했다</div>
+          </div>
+        </div>
+
+        <div class="tbl-wrap">
+          <table class="univ-tbl">
+            <thead>
+              <tr><th>구분</th><th>대학 / 학과</th><th>전형</th><th>면접</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="rtag rt-up">상향①</span></td><td><input placeholder="대학/학과"></td><td><input placeholder="학종/교과"></td><td><input placeholder="유/무"></td></tr>
+              <tr><td><span class="rtag rt-up">상향②</span></td><td><input placeholder="대학/학과"></td><td><input placeholder="학종/교과"></td><td><input placeholder="유/무"></td></tr>
+              <tr><td><span class="rtag rt-fit">적정①</span></td><td><input placeholder="대학/학과"></td><td><input placeholder="학종/교과"></td><td><input placeholder="유/무"></td></tr>
+              <tr><td><span class="rtag rt-fit">적정②</span></td><td><input placeholder="대학/학과"></td><td><input placeholder="학종/교과"></td><td><input placeholder="유/무"></td></tr>
+              <tr><td><span class="rtag rt-safe">안정①</span></td><td><input placeholder="대학/학과"></td><td><input placeholder="학종/교과"></td><td><input placeholder="유/무"></td></tr>
+              <tr><td><span class="rtag rt-safe">안정②</span></td><td><input placeholder="대학/학과"></td><td><input placeholder="학종/교과"></td><td><input placeholder="유/무"></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PART C -->
+    <div class="part-block">
+      <div class="part-head">
+        <div class="part-badge">PART<br>C</div>
+        <div class="part-meta">
+          <div class="part-tag">SECTION 03 · 10점</div>
+          <div class="part-name">면접 준비 & 실행 로드맵</div>
+          <div class="part-sub">면접 소재 발굴 · 학기별 과제 점검</div>
+        </div>
+      </div>
+      <div class="part-body">
+
+        <div class="info-box">
+          💬 <strong>2024학년도부터 자기소개서 전면 폐지</strong><br>
+          세특 기반 면접 질문 비중이 높아졌습니다.<br>
+          고2의 탐구 깊이 = 면접 준비입니다.
+        </div>
+
+        <div class="chk-group">
+          <div class="chk-group-label">C-1 면접 소재 발굴</div>
+          <div class="chk-item" onclick="tap(this,2,'C')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">세특에서 면접 질문이 나올 수 있는 탐구 소재 2가지 이상을 꼽을 수 있다</div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'C')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">지원 전공과 연결되는 진로 탐색 계기를 말로 설명할 수 있다</div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'C')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">협력·갈등 해결·리더십 경험 중 하나를 구체적으로 말할 수 있다
+              <div class="chk-note">공동체역량 면접 대비</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="chk-group">
+          <div class="chk-group-label">C-2 실행 로드맵</div>
+          <div class="chk-item" onclick="tap(this,2,'C')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">수시 원서 후보 6곳 확정 일정을 알고 있다</div>
+          </div>
+          <div class="chk-item" onclick="tap(this,2,'C')">
+            <div class="chk-box"><div class="chk-dot"></div></div>
+            <div class="chk-txt">수능 최저가 있는 전형을 선택했다면 수능 준비를 병행하고 있다
+              <div class="chk-note">학종 집중 중 수능 최저 미충족 → 합격 취소 위험</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PART D -->
+    <div class="part-block" style="border-bottom:none;">
+      <div class="part-head">
+        <div class="part-badge">PART<br>D</div>
+        <div class="part-meta">
+          <div class="part-tag">SECTION 04 · 성찰</div>
+          <div class="part-name">핵심 성찰 질문 3</div>
+          <div class="part-sub">솔직하게 현재 상태를 적어보세요</div>
+        </div>
+      </div>
+      <div class="part-body">
+        <div class="reflect-block">
+
+          <div class="reflect-item">
+            <div class="reflect-q"><span class="qtag">Q1</span>내 학생부는 '파편화된 스펙'인가, '하나의 이야기'인가?</div>
+            <div class="reflect-hint">→ 입학사정관은 활동의 양보다 연결과 성장 흐름을 봅니다.</div>
+            <textarea class="reflect-ta" placeholder="지금 상태와 대응 전략을 적어보세요..."></textarea>
+          </div>
+
+          <div class="reflect-item">
+            <div class="reflect-q"><span class="qtag">Q2</span>가장 자신 있는 세특은 무엇이고, 그 탐구 과정을 말로 설명할 수 있는가?</div>
+            <div class="reflect-hint">→ 세특은 '제출'로 끝나는 것이 아니라 '이해'해야 합니다.</div>
+            <textarea class="reflect-ta" placeholder="지금 상태와 대응 전략을 적어보세요..."></textarea>
+          </div>
+
+          <div class="reflect-item">
+            <div class="reflect-q"><span class="qtag">Q3</span>수능 최저가 있는 전형이라면, 지금 수능 준비를 병행하고 있는가?</div>
+            <div class="reflect-hint">→ 수능 전날까지 수능 준비를 멈추면 안 됩니다.</div>
+            <textarea class="reflect-ta" placeholder="지금 상태와 대응 전략을 적어보세요..."></textarea>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /#form-page -->
+
+
+  <!-- ===== 결과 페이지 ===== -->
+  <div id="result-page">
+    <div class="result-wrap">
+
+      <div class="result-h">나의 <em>자가진단 결과</em></div>
+
+      <div class="score-card">
+        <div class="score-lbl">총 점수 (30점 만점)</div>
+        <div class="score-num" id="rScore">0</div>
+        <div class="score-denom">/ 30점</div>
+        <div class="status-pill" id="rStatus">—</div>
+      </div>
+
+      <div class="breakdown" id="rBreakdown"></div>
+      <div class="action-box" id="rAction"></div>
+
+      <div class="result-btns">
+        <button class="btn-gold" onclick="doCapture()">📸 결과 이미지 저장</button>
+        <button class="btn-kakao" onclick="shareKakao()">
+          <div class="kakao-icon">K</div>
+          카카오톡으로 공유하기
+        </button>
+        <button class="btn-navy" onclick="doReset()">↺ 다시 진단하기</button>
+        <div class="evayeon-cta">
+          더 상세한 전략이 필요하다면<br>
+          <strong>에바연 홈페이지</strong>에서 전체판(8파트)을 확인하세요
+        </div>
+      </div>
+
+    </div>
+  </div><!-- /#result-page -->
+
+  <!-- sticky CTA -->
+  <div class="sticky-cta" id="stickyBtn">
+    <button onclick="showResult()">
+      진단 완료 — <span class="gold-txt">결과 확인하기 →</span>
+    </button>
+  </div>
+
+</div><!-- /#app -->
+
+
+<!-- 캡처용 -->
+<div id="cap-view">
+  <div class="cap-brand">에바연 · EVAYEON | 고2 입시 자가진단</div>
+  <div class="cap-title">나의 자가진단 결과</div>
+  <div class="cap-sub" id="capDate"></div>
+  <div class="cap-big">
+    <div class="cap-n" id="capN">0</div>
+    <div class="cap-d">/ 30점</div>
+    <div class="status-pill" id="capBadge" style="display:inline-block;margin-top:6px;">—</div>
+  </div>
+  <div class="cap-rows" id="capRows"></div>
+  <div class="cap-act" id="capAct"></div>
+  <div class="cap-foot">에바연 바른교육연구소 | 탐구는 구조에서 시작됩니다</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ── 상태 ── */
+let total = 0;
+const ps = { A:0, B:0, C:0 };
+const pm = { A:10, B:10, C:10 };
+const pn = { A:'PART A  수시·서사', B:'PART B  탐구·대학', C:'PART C  면접·로드맵' };
+
+/* ── 스플래시 → 앱 ── */
+function startDiag() {
+  document.getElementById('splash').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  window.scrollTo(0,0);
+}
+
+/* ── 체크 토글 ── */
+function tap(el, score, part) {
+  el.classList.toggle('on');
+  const d = el.classList.contains('on') ? score : -score;
+  total += d;
+  ps[part] += d;
+  updateProg();
+}
+
+function updateProg() {
+  const pct = Math.max(0, Math.min(100, (total/30)*100));
+  document.getElementById('progFill').style.width = pct + '%';
+  document.getElementById('progTxt').textContent = total + ' / 30';
+}
+
+/* ── 결과 표시 ── */
+function showResult() {
+  document.getElementById('form-page').style.display = 'none';
+  document.getElementById('result-page').style.display = 'block';
+  document.getElementById('stickyBtn').style.display = 'none';
+  window.scrollTo(0,0);
+
+  document.getElementById('rScore').textContent = total;
+
+  let stTxt, stCls, actHTML;
+  if (total >= 25) {
+    stTxt = '✅ 안정 궤도';
+    stCls = 'st-good';
+    actHTML = '<strong>현재 방향 유지 + 탐구 심화 권장</strong>지금 흐름을 유지하면서 탐구보고서 완성도를 높이고, 목표 대학별 세특 평가 기준을 더 세밀하게 분석해보세요.';
+  } else if (total >= 18) {
+    stTxt = '⚠ 부분 보완 필요';
+    stCls = 'st-warn';
+    actHTML = '<strong>취약 파트 집중 보완 권장</strong>점수가 낮은 파트를 중심으로 구체적인 보완 계획을 세우세요. 에바연 전체판(8파트)에서 더 상세한 도구를 활용할 수 있습니다.';
+  } else {
+    stTxt = '🔴 전략 재설계 필요';
+    stCls = 'st-bad';
+    actHTML = '<strong>에바연 전체판 + 상담 권장</strong>입시 방향 전반을 점검할 필요가 있습니다. 에바연 전체판과 서면 상담을 통해 지금 가장 효과적인 방향을 함께 찾아보세요.';
+  }
+
+  const rStatus = document.getElementById('rStatus');
+  rStatus.textContent = stTxt;
+  rStatus.className = 'status-pill ' + stCls;
+  document.getElementById('rAction').innerHTML = actHTML;
+
+  const bd = document.getElementById('rBreakdown');
+  bd.innerHTML = '';
+  ['A','B','C'].forEach(k => {
+    const s = ps[k], m = pm[k];
+    bd.innerHTML += `<div class="bd-item">
+      <div class="bd-top">
+        <div class="bd-name">${pn[k]}</div>
+        <div class="bd-score">${s} / ${m}점</div>
+      </div>
+      <div class="bd-bar-bg"><div class="bd-bar" style="width:${Math.round(s/m*100)}%"></div></div>
+    </div>`;
+  });
+
+  /* 캡처뷰 세팅 */
+  const now = new Date();
+  document.getElementById('capDate').textContent =
+    now.getFullYear()+'년 '+(now.getMonth()+1)+'월 '+now.getDate()+'일 진단';
+  document.getElementById('capN').textContent = total;
+  const cb = document.getElementById('capBadge');
+  cb.textContent = stTxt; cb.className = 'status-pill '+stCls;
+  document.getElementById('capAct').innerHTML = actHTML;
+  let rows = '';
+  ['A','B','C'].forEach(k => {
+    rows += `<div class="cap-row"><div class="cap-rn">${pn[k]}</div><div class="cap-rs">${ps[k]} / ${pm[k]}</div></div>`;
+  });
+  document.getElementById('capRows').innerHTML = rows;
+}
+
+/* ── 이미지 저장 ── */
+function doCapture() {
+  const v = document.getElementById('cap-view');
+  v.style.display = 'block';
+  v.style.position = 'fixed';
+  v.style.top = '-9999px';
+  showToast('이미지 생성 중...');
+  setTimeout(() => {
+    html2canvas(v, { scale:2, backgroundColor:'#0d1b2a', useCORS:true, logging:false })
+      .then(canvas => {
+        v.style.display = 'none';
+        const a = document.createElement('a');
+        a.download = '에바연_고2_자가진단.png';
+        a.href = canvas.toDataURL('image/png');
+        a.click();
+        showToast('✅ 이미지가 저장되었습니다');
+      }).catch(() => { v.style.display='none'; showToast('저장 중 오류가 발생했습니다'); });
+  }, 300);
+}
+
+/* ── 카카오톡 공유 ── */
+function shareKakao() {
+  const score = total;
+  let statusText = score >= 25 ? '안정 궤도 ✅' : score >= 18 ? '부분 보완 필요 ⚠' : '전략 재설계 필요 🔴';
+  const text = `📋 에바연 고2 입시 자가진단 결과\n\n총점: ${score} / 30점\n상태: ${statusText}\n\n나도 점검해보기 →`;
+  const url = window.location.href;
+
+  /* 카카오 SDK가 없을 경우 네이티브 공유 또는 클립보드 복사로 fallback */
+  if (navigator.share) {
+    navigator.share({
+      title: '📋 고2 입시 자가진단 | 에바연',
+      text: text,
+      url: url
+    }).catch(() => copyFallback(text + '\n' + url));
+  } else {
+    copyFallback(text + '\n' + url);
+  }
+}
+
+function copyFallback(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      showToast('📋 링크가 복사됐어요! 카톡에 붙여넣기 하세요');
+    }).catch(() => showToast('카카오톡 앱에서 링크를 공유해주세요'));
+  } else {
+    showToast('카카오톡 앱에서 링크를 공유해주세요');
+  }
+}
+
+/* ── 리셋 ── */
+function doReset() {
+  if (!confirm('처음부터 다시 진단할까요?')) return;
+  total = 0; ps.A = 0; ps.B = 0; ps.C = 0;
+  document.querySelectorAll('.chk-item.on').forEach(el => el.classList.remove('on'));
+  document.querySelectorAll('.reflect-ta').forEach(el => el.value = '');
+  updateProg();
+  document.getElementById('result-page').style.display = 'none';
+  document.getElementById('form-page').style.display = 'block';
+  document.getElementById('stickyBtn').style.display = 'block';
+  window.scrollTo(0,0);
+}
+
+/* ── 토스트 ── */
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+updateProg();
+</script>
+</body>
+</html>
